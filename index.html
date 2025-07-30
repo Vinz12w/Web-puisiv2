@@ -56,5 +56,21 @@
         <p>&copy; 2025 Nona Cell. Semua hak dilindungi.</p>
         <p><a href="#">Kebijakan Privasi</a> | <a href="#">Syarat dan Ketentuan</a></p>
     </footer>
+    
+     <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector('header'); // Ambil elemen header
+        window.addEventListener('scroll', function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScrollTop && currentScroll > header.offsetHeight) {
+                // Scroll ke bawah dan sudah melewati tinggi header
+                header.classList.add('hidden-header');
+            } else if (currentScroll < lastScrollTop) {
+                // Scroll ke atas
+                header.classList.remove('hidden-header');
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Untuk iOS Safari
+        });
+    </script>
 </body>
 </html>
