@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Nona Cell</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Kontak Nona Cell</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="biography.html">Biografi</a></li>
+                <li><a href="poems.html">Puisi</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-info-section">
+            <h2>Hubungi Saya</h2>
+            <p>Jika Anda memiliki pertanyaan, saran, atau ingin berkolaborasi, jangan ragu untuk menghubungi saya melalui informasi di bawah ini:</p>
+            <div class="contact-details">
+                <p><strong>Email:</strong> <a href="mailto:nona.ceisy@example.com">nona.ceisy@example.com</a></p>
+                <p><strong>Telepon:</strong> +62 882-0051-8249</p>
+                <p><strong>Alamat:</strong> Kabupaten Gunung Kidul, Indonesia</p>
+            </div>
+            <div class="social-media-links">
+                <p>Temukan saya di media sosial:</p>
+                <a href="https://www.youtube.com/@yerinsenja_v" target="_blank" class="social-icon">Youtube</a> |
+                <a href="https://www.wattpad.com/user/Nonacelsyy" target="_blank" class="social-icon">Wattpad</a> |
+                <a href="https://www.tiktok.com/@melodikelana" target="_blank" class="social-icon">Tiktok</a>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <h2>Kirim Saran atau Kritik</h2>
+            <p>Saya sangat menghargai masukan Anda. Silakan gunakan formulir di bawah ini untuk mengirimkan saran atau kritik.</p>
+            <form class="contact-form" onsubmit="event.preventDefault(); showFormResponse();">
+                <label for="name">Nama Anda:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Anda:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subjek:</label>
+                <input type="text" id="subject" name="subject">
+
+                <label for="message">Pesan Anda:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit" class="submit-button">Kirim Pesan</button>
+            </form>
+            <div id="form-response" class="form-response">
+                Terima kasih atas pesan Anda! Kami akan segera merespons.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nona Cell. Semua hak dilindungi.</p>
+        <p><a href="#">Kebijakan Privasi</a> | <a href="#">Syarat dan Ketentuan</a></p>
+    </footer>
+
+    <script>
+        function showFormResponse() {
+            document.getElementById('form-response').style.display = 'block';
+            // Anda bisa menambahkan logika pengiriman formulir ke server di sini
+            // Untuk demo, ini hanya menampilkan pesan sukses
+            setTimeout(() => {
+                document.getElementById('form-response').style.display = 'none';
+                document.querySelector('.contact-form').reset(); // Mengosongkan formulir
+            }, 3000); // Sembunyikan pesan setelah 3 detik
+        }
+    </script>
+</body>
+</html>

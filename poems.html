@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puisi - Nona Ceisy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Galeri Puisi Nona Ceisy</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="biography.html">Biografi</a></li>
+                <li><a href="poems.html">Puisi</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="poem-gallery-section">
+            <h2>Koleksi Puisi</h2>
+            <input type="text" id="search" placeholder="Cari puisi berdasarkan judul atau isi..." onkeyup="searchPoems()">
+            <ul id="poem-list" class="poem-list-overview">
+                <li><a href="#" onclick="showPoem('puisi1')">Puisi Pertama</a> - Menggambarkan keindahan alam dan perasaan penulis.</li>
+                <li><a href="#" onclick="showPoem('puisi2')">Puisi Kedua</a> - Berbicara tentang cinta dan harapan yang tak lekang oleh waktu.</li>
+                <li><a href="#" onclick="showPoem('puisi3')">Puisi Ketiga</a> - Menggambarkan kesedihan dan kehilangan dengan sentuhan melankolis.</li>
+                <li><a href="#" onclick="showPoem('puisi4')">Mencintai Pagi yang Dingin</a> - Sebuah refleksi tentang ketenangan pagi dan harapan baru.</li>
+                <li><a href="#" onclick="showPoem('puisi5')">Mencium Bau Mesiu di Sela Titik dan Koma</a> - Puisi yang mendalam tentang kehidupan dan perjuangan.</li>
+            </ul>
+        </section>
+
+        <div id="poem-detail" class="poem-detail-view hidden">
+            <button onclick="goBack()" class="back-button">Kembali ke Daftar Puisi</button>
+            <h2 id="poem-title" class="poem-title-detail"></h2>
+            <p id="poem-content" class="poem-content-detail"></p>
+            <p class="poem-meta"><strong>Tanggal Terbit:</strong> <span id="poem-date"></span></p>
+        </div>
+
+        <section id="more-poems-section">
+            <h2>Puisi Lainnya</h2>
+            <div class="puisi-list" id="dynamic-poem-list">
+                <!-- Puisi dinamis akan ditambahkan di sini -->
+            </div>
+            <button id="loadMore" class="load-more-button">Muat Lebih Banyak Puisi</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nona Cell. Semua hak dilindungi.</p>
+        <p><a href="#">Kebijakan Privasi</a> | <a href="#">Syarat dan Ketentuan</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
